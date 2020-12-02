@@ -12,7 +12,7 @@ object NetworkModule {
             .setLenient()
             .create()
 
-        return Retrofit.Builder().baseUrl("http://192.168.100.35/datapengunjung/")
+        return Retrofit.Builder().baseUrl("http://192.168.1.39/datapengunjung/")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
 

@@ -28,11 +28,20 @@ class InputActivity : AppCompatActivity() {
         when(btnSimpan.text){
             "Update" ->{
                 btnSimpan.setOnClickListener {
-                    updateData(getData?.id, etNama.text.toString(), etNoHP.text.toString(), etKeperluan.text.toString())
+                    if(etNama.text.isNullOrEmpty() || etNoHP.text.isNullOrEmpty() || etKeperluan.text.isNullOrEmpty()){
+                        Toast.makeText(applicationContext, "Nama, No Hp, Keperluan Anda harus terisi!!", Toast.LENGTH_LONG).show()
+                    }else{
+                        updateData(getData?.id, etNama.text.toString(), etNoHP.text.toString(), etKeperluan.text.toString())
+                    }
                 }
-            }else -> {
+            }
+            else -> {
                 btnSimpan.setOnClickListener {
-                    inputData(etNama.text.toString(), etNoHP.text.toString(), etKeperluan.text.toString())
+                    if(etNama.text.isNullOrEmpty() || etNoHP.text.isNullOrEmpty() || etKeperluan.text.isNullOrEmpty()){
+                        Toast.makeText(applicationContext, "Nama, No Hp, Keperluan Anda harus terisi!!", Toast.LENGTH_LONG).show()
+                    }else{
+                        inputData(etNama.text.toString(), etNoHP.text.toString(), etKeperluan.text.toString())
+                    }
                 }
             }
         }

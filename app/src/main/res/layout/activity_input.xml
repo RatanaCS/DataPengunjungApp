@@ -23,6 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="No HP..."
+        android:inputType="phone"
         android:layout_marginTop="10dp"
         android:padding="10dp"
         android:background="@drawable/bg_edit_text"/>
